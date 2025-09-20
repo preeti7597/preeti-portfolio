@@ -72,43 +72,42 @@ export default function Projects() {
       className="px-6 md:px-16 py-16 md:py-16 mx-auto bg-blue-50"
     >
       <div className="max-w-6xl mx-auto">
-         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-        Projects
-      </h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+          Projects
+        </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className="bg-white dark:bg-gray-800 shadow-md rounded-xl hover:scale-105 hover:shadow-xl transition transform"
-          >
-            <img
-              src={project.img}
-              alt={project.subtitle}
-              className="h-48 w-full object-contain rounded-t-xl"
-            />
-            <div className="px-4 py-3">
-              {/* <span className="text-gray-400 dark:text-gray-300 uppercase text-xs">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className="bg-white dark:bg-gray-800 shadow-md rounded-xl hover:scale-105 hover:shadow-xl transition transform"
+            >
+              <img
+                src={project.img}
+                alt={project.subtitle}
+                className="h-48 w-full object-contain rounded-t-xl"
+              />
+              <div className="px-4 py-3">
+                {/* <span className="text-gray-400 dark:text-gray-300 uppercase text-xs">
                 {project.subtitle}
               </span> */}
-              <p className="text-lg font-bold text-black dark:text-white truncate block capitalize">
-                {project.subtitle}
-              </p>
-              <div className="flex mt-3">
-                <button
-                  onClick={() => setSelectedProject(project)}
-                  className="px-3 py-1 rounded text-xs bg-blue-7 dark:bg-blue-700 text-white dark:text-gray-200 bg-gray-300 dark:hover:bg-white-600 transition"
-                >
-                  View Details
-                </button>
+                <p className="text-lg font-bold text-black dark:text-white truncate block capitalize">
+                  {project.subtitle}
+                </p>
+                <div className="flex mt-3">
+                  <button
+                    onClick={() => setSelectedProject(project)}
+                    className="px-3 py-1 rounded text-xs bg-blue-7 dark:bg-blue-700 text-white dark:text-gray-200 bg-gray-300 dark:hover:bg-white-600 transition"
+                  >
+                    View Details
+                  </button>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
 
-      </div>
-    
       {/* Modal */}
       <AnimatePresence>
         {selectedProject && (

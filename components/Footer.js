@@ -1,6 +1,15 @@
+import Image from "next/image";
+
 export default function Footer() {
   return (
-    <footer className="px-6 md:px-16 py-16 bg-blue-300 dark:bg-gray-900 text-gray-600 dark:text-gray-400">
+    <footer
+      className="px-6 md:px-16 py-16 text-gray-600 dark:text-gray-400"
+      style={{
+        backgroundImage: "url('/footer.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Left Side */}
