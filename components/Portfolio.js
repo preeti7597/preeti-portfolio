@@ -7,7 +7,6 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Crete Professional Alliance",
       subtitle: "Crete Professional Alliance",
       img: "/crete.png",
       link: "https://www.cretepa.com",
@@ -16,7 +15,6 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: "Pinkishe Foundation",
       subtitle: "Pinkishe Foundation",
       img: "/pinkishe.png",
       link: "https://pinkishe.org",
@@ -25,7 +23,6 @@ export default function Projects() {
     },
     {
       id: 3,
-      title: "Uniinsider",
       subtitle: "Uniinsider",
       img: "/uniinsider.png",
       link: "https://staging.uniinsiders.com/",
@@ -34,7 +31,6 @@ export default function Projects() {
     },
     {
       id: 4,
-      title: "The Care Connexion",
       subtitle: "The Care Connexion",
       img: "/care.png",
       link: "https://www.thecareconnexion.com/",
@@ -43,7 +39,6 @@ export default function Projects() {
     },
     {
       id: 5,
-      title: "ZBS Partners",
       subtitle: "ZBS Partners",
       img: "/zbs.png",
       link: "https://www.zbspartners.com/",
@@ -53,7 +48,6 @@ export default function Projects() {
     },
     {
       id: 6,
-      title: "Shield Technology Partners",
       subtitle: "Shield Technology Partners",
       img: "/shield.png",
       link: "https://shieldtp.com/",
@@ -62,7 +56,6 @@ export default function Projects() {
     },
     {
       id: 7,
-      title: "Luxeporter",
       subtitle: "Luxeporter",
       img: "/luxporter.png",
       link: "https://luxaporter.com/",
@@ -91,15 +84,15 @@ export default function Projects() {
           >
             <img
               src={project.img}
-              alt={project.title}
+              alt={project.subtitle}
               className="h-48 w-full object-contain rounded-t-xl"
             />
             <div className="px-4 py-3">
-              <span className="text-gray-400 dark:text-gray-300 uppercase text-xs">
+              {/* <span className="text-gray-400 dark:text-gray-300 uppercase text-xs">
                 {project.subtitle}
-              </span>
+              </span> */}
               <p className="text-lg font-bold text-black dark:text-white truncate block capitalize">
-                {project.title}
+                {project.subtitle}
               </p>
               <div className="flex mt-3">
                 <button

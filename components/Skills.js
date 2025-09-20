@@ -63,7 +63,7 @@ export default function Skills() {
       transition={{ duration: 1 }}
       className="p-8 md:p-16"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto py-24">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center">
           Skills
         </h2>
