@@ -35,16 +35,15 @@ export default function Projects() {
       img: "/care.png",
       link: "https://www.thecareconnexion.com/",
       description:
-        "A platform that streamlines how home healthcare agencies secure and manage a mobile workforce. It connects agencies directly with vetted healthcare professionals, enabling them to extend their coverage area and capture referrals without compromising HIPAA compliance. Built using React.js, Material UI, Css",
+        "A platform that streamlines how home healthcare agencies secure and manage a mobile workforce. Built using React.js, Material UI, CSS.",
     },
     {
       id: 5,
       subtitle: "ZBS Partners",
       img: "/zbs.png",
       link: "https://www.zbspartners.com/",
-
       description:
-        "A private equity platform focused on scaling and consolidating fragmented service businesses across the U.S. It emphasizes flexible capital and hands-on involvement to drive growth and operational improvement. Built using React, TailwindCSS",
+        "A private equity platform focused on scaling and consolidating fragmented service businesses across the U.S. Built using React, TailwindCSS.",
     },
     {
       id: 6,
@@ -52,7 +51,7 @@ export default function Projects() {
       img: "/shield.png",
       link: "https://shieldtp.com/",
       description:
-        "A private equity platform transforming managed service providers into AI-powered, scalable businesses. It combines local leadership autonomy with centralized expertise and resources. AI engineers are embedded to design tools that solve problems and create opportunities. Built using React.js, Tailwind CSS, Material-UI.",
+        "A private equity platform transforming managed service providers into AI-powered, scalable businesses. Built using React.js, Tailwind CSS, Material-UI.",
     },
     {
       id: 7,
@@ -60,7 +59,7 @@ export default function Projects() {
       img: "/luxporter.png",
       link: "https://luxaporter.com/",
       description:
-        "A company offering high-quality interior and entrance doors, including fire-rated and aluminum options, with custom carpentry and a variety of styles. Built using React, Next.js, Redux, and Material-UI.",
+        "A company offering high-quality interior and entrance doors, with custom carpentry and a variety of styles. Built using React, Next.js, Redux, and Material-UI.",
     },
   ];
 
@@ -69,41 +68,41 @@ export default function Projects() {
   return (
     <section
       id="Projects"
-      className="px-6 md:px-16 py-16 md:py-16 mx-auto bg-blue-50"
+      className="px-6 md:px-16 py-24 bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50"
     >
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          Projects
+        <h2 className="text-4xl font-bold mb-16 text-center text-gray-800">
+          🚀 My Projects
         </h2>
 
+        {/* Projects Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project) => (
-            <div
+            <motion.div
               key={project.id}
-              className="bg-white dark:bg-gray-800 shadow-md rounded-xl hover:scale-105 hover:shadow-xl transition transform"
+              whileHover={{ scale: 1.05, y: -5 }}
+              transition={{ duration: 0.3 }}
+              className="relative bg-gradient-to-tr from-blue-100 via-purple-100 to-pink-100 rounded-xl shadow-lg overflow-hidden cursor-pointer h-64"
+              onClick={() => setSelectedProject(project)}
             >
-              <img
-                src={project.img}
-                alt={project.subtitle}
-                className="h-48 w-full object-contain rounded-t-xl"
-              />
-              <div className="px-4 py-3">
-                {/* <span className="text-gray-400 dark:text-gray-300 uppercase text-xs">
-                {project.subtitle}
-              </span> */}
-                <p className="text-lg font-bold text-black dark:text-white truncate block capitalize">
+              {/* Project Image */}
+              <div className="relative h-48 w-full flex items-center justify-center overflow-hidden">
+                <Image
+                  src={project.img}
+                  alt={project.subtitle}
+                  fill
+                  className="object-contain p-4"
+                />
+              </div>
+
+              {/* Text */}
+              <div className="px-4 py-3 bg-white/70 backdrop-blur-md absolute bottom-0 w-full">
+                <p className="text-lg font-bold text-gray-900">
                   {project.subtitle}
                 </p>
-                <div className="flex mt-3">
-                  <button
-                    onClick={() => setSelectedProject(project)}
-                    className="px-3 py-1 rounded text-xs bg-blue-7 dark:bg-blue-700 text-white dark:text-gray-200 bg-gray-300 dark:hover:bg-white-600 transition"
-                  >
-                    View Details
-                  </button>
-                </div>
+                <p className="text-xs text-gray-600">Click to view details</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -112,42 +111,53 @@ export default function Projects() {
       <AnimatePresence>
         {selectedProject && (
           <motion.div
-            className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
             <motion.div
-              className="bg-white dark:bg-gray-800 rounded-xl shadow-xl max-w-lg w-full p-6 relative"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.8, opacity: 0 }}
+              className="bg-white dark:bg-gray-900 rounded-2xl shadow-xl max-w-lg w-full p-6 relative"
+              initial={{ y: 100, opacity: 0, scale: 0.9 }}
+              animate={{ y: 0, opacity: 1, scale: 1 }}
+              exit={{ y: 100, opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.4 }}
             >
+              {/* Close Button */}
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-1 right-2 text-gray-700 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white"
+                className="absolute top-3 right-3 text-gray-500 hover:text-gray-900 dark:hover:text-white text-xl"
               >
                 ✕
               </button>
-              <img
-                src={selectedProject.img}
-                alt={selectedProject.title}
-                className="h-48 w-full object-cover rounded-xl mb-4"
-              />
-              <div className="flex">
-                <h3 className="text-lg font-bold text-black dark:text-white truncate block capitalize">
-                  {selectedProject.title}
+
+              {/* Project Image */}
+              <div className="relative h-48 w-full mb-4 overflow-hidden rounded-lg">
+                <Image
+                  src={selectedProject.img}
+                  alt={selectedProject.subtitle}
+                  fill
+                  className=""
+                />
+              </div>
+
+              {/* Title + Link */}
+              <div className="flex items-center mb-3">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                  {selectedProject.subtitle}
                 </h3>
                 <a
                   href={selectedProject.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cursor-pointer mt-1 ml-2 inline-flex items-center justify-center w-6 h-6 rounded-full bg-blue-200 text-white hover:bg-blue-600 transition"
+                  className="ml-3 text-sm px-3 py-1 rounded bg-gradient-to-tr from-blue-100 via-purple-100 to-pink-100 text-gray-900 hover:opacity-80 transition border border-gray-300"
                 >
-                  ↗
+                  Visit ↗
                 </a>
               </div>
-              <p className="text-sm md:text-sm text-gray-600 max-w-md mx-auto md:mx-0 font-base">
+
+              {/* Description */}
+              <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                 {selectedProject.description}
               </p>
             </motion.div>
