@@ -100,7 +100,7 @@ export default function Projects() {
                 <p className="text-lg font-bold text-gray-900">
                   {project.subtitle}
                 </p>
-                <p className="text-xs text-gray-600">Click to view details</p>
+                {/* <p className="text-xs text-gray-600">Click to view details</p> */}
               </div>
             </motion.div>
           ))}

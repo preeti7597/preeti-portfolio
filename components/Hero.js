@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section
-      className="w-full sm:py-auto py-24 bg-cover bg-center flex flex-col"
+      className="w-full md:py-8 py-24 bg-cover bg-center flex flex-col"
       style={{ backgroundImage: "url('/bg.jpg')" }}
     >
       {/* Hero content */}
@@ -15,7 +15,7 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex-shrink-0 w-80 h-80 md:w-80 md:h-80"
+            className="flex-shrink-0 w-80 h-80 md:w-[30rem] md:h-[30rem]"
           >
             <Image
               src="/girl.png"
