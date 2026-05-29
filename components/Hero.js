@@ -41,8 +41,7 @@ export default function Hero() {
               Frontend Developer
             </p>
             <p className="text-sm sm:text-base text-gray-600 max-w-md mx-auto md:mx-0">
-              Creating user-focused digital experiences that work beautifully
-              everywhere.
+             Crafting user-focused digital experiences that perform seamlessly across every platform and device
             </p>
           </motion.div>
         </div>

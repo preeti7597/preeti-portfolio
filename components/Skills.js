@@ -1,39 +1,3 @@
-// import { motion } from "framer-motion";
-// import Chip from "@mui/material/Chip";
-
-// export default function Skills() {
-//   const skills = [
-//     "React.js",
-//     "Next.js",
-//     "Redux Toolkit",
-//     "Tailwind CSS",
-//     "Material UI",
-//     "JavaScript",
-//     "HTML",
-//     "CSS",
-//     "Webflow",
-//     "Performance optimization",
-//     "Figma",
-//     "Git",
-//     "JIRA",
-//   ];
-//   return (
-//     <motion.section
-//       initial={{ opacity: 0, y: 50 }}
-//       whileInView={{ opacity: 1, y: 0 }}
-//       viewport={{ once: true }}
-//       transition={{ duration: 1 }}
-//       className="p-8 md:p-16"
-//     >
-//       <h2 className="text-3xl font-bold mb-6">Skills</h2>
-//       <div className="flex flex-wrap gap-3">
-//         {skills.map((skill, i) => (
-//           <Chip key={i} label={skill} color="primary" variant="outlined" />
-//         ))}
-//       </div>
-//     </motion.section>
-//   );
-// }
 "use client";
 import { motion } from "framer-motion";
 
