@@ -11,8 +11,8 @@ export default function Projects() {
       img: "/crete.png",
       link: "https://www.cretepa.com",
       description:
-        // "A professional network website built with ReactJS, Redux, and TailwindCSS. Showcases accounting, tax, and advisory services with a modern, responsive design and partner/member firm integration.",
-        "A professional network website built with Webflow. Showcases accounting, tax, and advisory services with a modern, responsive design and partner/member firm integration.",
+        "A professional network website built with ReactJS, Redux, and TailwindCSS. Showcases accounting, tax, and advisory services with a modern, responsive design and partner/member firm integration.",
+        // "A professional network website built with Webflow. Showcases accounting, tax, and advisory services with a modern, responsive design and partner/member firm integration.",
     },
     {
       id: 2,
@@ -45,8 +45,8 @@ export default function Projects() {
       img: "/zbs.png",
       link: "https://www.zbspartners.com/",
       description:
-        // "A private equity platform focused on scaling and consolidating fragmented service businesses across the U.S. Built using React, TailwindCSS.",
-        "A private equity platform focused on scaling and consolidating fragmented service businesses across the U.S. Built using Webflow.",
+        "A private equity platform focused on scaling and consolidating fragmented service businesses across the U.S. Built using React, TailwindCSS.",
+        // "A private equity platform focused on scaling and consolidating fragmented service businesses across the U.S. Built using Webflow.",
     },
     {
       id: 6,
@@ -54,8 +54,8 @@ export default function Projects() {
       img: "/shield.png",
       link: "https://shieldtp.com/",
       description:
-        // "A private equity platform transforming managed service providers into AI-powered, scalable businesses. Built using React.js, Tailwind CSS, Material-UI.",
-        "A private equity platform transforming managed service providers into AI-powered, scalable businesses. Built using Webflow.",
+        "A private equity platform transforming managed service providers into AI-powered, scalable businesses. Built using React.js, Tailwind CSS, Material-UI.",
+        // "A private equity platform transforming managed service providers into AI-powered, scalable businesses. Built using Webflow.",
     },
     {
       id: 7,
