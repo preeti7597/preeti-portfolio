@@ -20,8 +20,8 @@ export default function Projects() {
       img: "/pinkishe.png",
       link: "https://pinkishe.org",
       description:
-        // "Pinkishe Foundation – A ReactJS and TailwindCSS-based NGO platform promoting menstrual health and hygiene. Provides free sanitary products, education, and eco-friendly solutions to empower women and communities.",
-        "Pinkishe Foundation – A Webflow-based NGO platform promoting menstrual health and hygiene. Provides free sanitary products, education, and eco-friendly solutions to empower women and communities.",
+        "Pinkishe Foundation – A ReactJS and TailwindCSS-based NGO platform promoting menstrual health and hygiene. Provides free sanitary products, education, and eco-friendly solutions to empower women and communities.",
+        // "Pinkishe Foundation – A Webflow-based NGO platform promoting menstrual health and hygiene. Provides free sanitary products, education, and eco-friendly solutions to empower women and communities.",
     },
     {
       id: 3,
